@@ -8,6 +8,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static net.serenitybdd.rest.SerenityRest.given;
+
 public class UserPageObject extends PageObject {
 
     public void getUserId (String UserID){
@@ -29,7 +31,7 @@ public class UserPageObject extends PageObject {
     }
 
 
-    private String generateSignature(String UserId, String Salt) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    private byte[] generateSignature(String UserId, String Salt) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
         String dateTime ="0";
 
@@ -38,7 +40,9 @@ public class UserPageObject extends PageObject {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
 
         byte[] digest = md.digest(composeStringToSHA256.getBytes("UTF-8"));
-// https://fluidattacks.com/web/es/defends/java/generar-sha2/
+
+        return digest;
+
     }
 
 }

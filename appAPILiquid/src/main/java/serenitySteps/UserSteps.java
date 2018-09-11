@@ -2,11 +2,8 @@ package serenitySteps;
 
 public class UserSteps {
 
-    public void isANewUser(){
+    public void checkIfIsAExistingUser(){
         assertTrue();
     }
 
-    public void isAnExisitingUser(){
-
-    }
 }
