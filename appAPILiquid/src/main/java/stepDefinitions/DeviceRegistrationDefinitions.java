@@ -27,7 +27,7 @@ public class DeviceRegistrationDefinitions {
 
     }
 
-    @When("^the user register a new device with folowing parameter \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\"$")
+    @When("^the user register a new device with following parameter \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\"$")
     public void introduceAndParameters(String deviceID, String deviceToken, String MSN, String language, String deviceType, String appVersion, String notes) throws UnsupportedEncodingException, NoSuchAlgorithmException {
 
         HashMap<String, String> deviceParameters = new HashMap<>();

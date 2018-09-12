@@ -1,5 +1,6 @@
 package pages;
 
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import utils.SignatureUtility;
 
