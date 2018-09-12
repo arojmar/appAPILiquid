@@ -30,6 +30,13 @@
             <name>bintray</name>
             <url>http://jcenter.bintray.com</url>
         </repository>
+        <repository>
+            <id>junit-releases-repo</id>
+            <name>Nexus Release Repository</name>
+            <url>
+                https://oss.sonatype.org/service/local/staging/deploy/maven2/
+            </url>
+        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -43,6 +50,12 @@
     </pluginRepositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -117,6 +130,16 @@
             <groupId>net.serenity_bdd.samples.junit</groupId>
             <artifactId>appAPILiquid</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity_bdd.samples.junit</groupId>
+            <artifactId>appAPILiquid</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
         </dependency>
     </dependencies>
     <build>
